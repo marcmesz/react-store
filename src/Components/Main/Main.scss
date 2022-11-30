@@ -1,0 +1,5 @@
+@use '../../scss/' as *;
+
+.main {
+    @include flex(unset, unset);
+}

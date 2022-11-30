@@ -1,0 +1,21 @@
+@use '../../scss/' as *;
+
+.category{
+    display: flex;
+
+    @include flex(center, unset);
+
+    &__icon{
+        display: flex;
+        font-size: 1.5em;
+    }
+
+    &__content{
+        margin-left: .4em;
+    }
+}
+
+.category + .category {
+    margin-top: .8em;
+}
+

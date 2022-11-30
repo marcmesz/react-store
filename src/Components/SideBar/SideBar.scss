@@ -1,0 +1,22 @@
+@use '../../scss/' as *;
+
+.sidebar{
+    min-width: 250px;
+
+    &__title{
+        margin-bottom: 1em;
+    }
+
+    &__categories{
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include tablet{
+        min-width: 180px;
+    }
+
+    @include mobile{
+        display: none;
+    }
+}

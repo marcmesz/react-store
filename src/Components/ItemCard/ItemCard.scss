@@ -1,0 +1,77 @@
+@use '../../scss/' as *;
+
+.item-card {
+    background-color: $white;
+    border-radius: 10px;
+    padding: 1em;
+    border-bottom: 4px solid lightgray;
+
+    &:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    &__title {
+        font-weight: bold;
+        margin-bottom: .5em;
+        margin-top: .5em;
+        height: 40px;
+        line-height: 20px;
+        font-weight: 700;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__image {
+        height: 250px;
+        width: 100%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: $white;
+    }
+
+    &__rate {
+        display: flex;
+        &__rating{
+            margin-right: .4em;
+        }
+    }
+
+    &__price {
+        margin-top: .5em;
+        margin-bottom: .5em;
+        font-weight: bold;
+        font-size: 1.3em;
+        color: red;
+    }
+
+    &__cartbtn{
+        @include flex(center, center);
+        display: flex;
+        width: 100%;
+        font-size: 1em;
+        padding: .4em;
+        background-color: $themeColor;
+        color: $white;
+        border: none;
+        border-radius: 5px;
+        padding: .5em 0;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $themeColorDark;
+        }
+
+        &__text{
+            margin-left: .3em;
+        }
+        &__icon{
+            font-size: 1.5em;
+        }
+    }
+
+
+}

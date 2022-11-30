@@ -1,11 +1,7 @@
 @use '../../scss/' as *;
 
 .item-card {
-    background-color: $white;
-    border-radius: 10px;
-    padding: 1em;
-    border-bottom: 4px solid lightgray;
-
+    
     &:hover{
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }

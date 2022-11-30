@@ -2,10 +2,11 @@ import './ItemCard.scss';
 import { FaShoppingCart } from 'react-icons/fa';
 import { BsStarFill } from 'react-icons/bs';
 import StarRatingComponent from 'react-star-rating-component';
+import Card from '../../UI/Card/Card';
 
 const ItemCard = props => {
     return (
-        <div className="item-card" title={props.item.title}>
+        <Card className="item-card" title={props.item.title}>
             <div className="item-card__image" style={{ backgroundImage: `url(${props.item.image})` }}></div>
             <div className="item-card__title">{props.item.title}</div>
             <div className="item-card__category">Category: {props.item.category}</div>
@@ -26,7 +27,7 @@ const ItemCard = props => {
                 <FaShoppingCart className="item-card__cartbtn__icon" />
                 <span className="item-card__cartbtn__text">Add to cart</span>
             </button>
-        </div>
+        </Card>
     )
 }
 

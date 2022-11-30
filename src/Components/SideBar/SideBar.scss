@@ -2,6 +2,7 @@
 
 .sidebar{
     min-width: 250px;
+    margin-right: 1em;
 
     &__title{
         margin-bottom: 1em;
@@ -13,7 +14,7 @@
     }
 
     @include tablet{
-        min-width: 180px;
+        min-width: 190px;
     }
 
     @include mobile{

@@ -1,8 +1,8 @@
 import './ItemCard.scss';
+import Card from '../../UI/Card/Card';
+import { Rating } from 'react-simple-star-rating'
 import { FaShoppingCart } from 'react-icons/fa';
 import { BsStarFill } from 'react-icons/bs';
-import StarRatingComponent from 'react-star-rating-component';
-import Card from '../../UI/Card/Card';
 
 const ItemCard = props => {
     return (
@@ -13,12 +13,10 @@ const ItemCard = props => {
             {/* <div className="item-card__description">{props.item.description}</div> */}
             <div className="item-card__rate" title={props.item.rating.count + " people voted"}>
                 <div className="item-card__rate__rating">Rating: </div>
-                <StarRatingComponent
-                    name="rating_2"
-                    editing={false}
-                    renderStarIcon={() => <BsStarFill style={{ marginTop: "3px" }} />}
-                    starCount={5}
-                    value={props.item.rating.rate}
+                <Rating
+                    initialValue={props.item.rating.rate}
+                    readonly={true}
+                    size={20}
                 />
                 <div className="item-card_rate-count">
                     <span className="item-card_rate-count__rate">{props.item.rating.rate}</span>

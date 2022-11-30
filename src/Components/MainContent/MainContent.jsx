@@ -1,6 +1,7 @@
 import './MainContent.scss';
 import ItemGrid from '../ItemGrid/ItemGrid';
 import useFetch from '../../Hooks/useFetch';
+import Skeleton from '../Skeleton/Skeleton';
 
 const MainContent = props => {
     let url = "https://fakestoreapi.com/products"
@@ -8,7 +9,7 @@ const MainContent = props => {
         url = `${url}/category/${props.category}`
     }
     const { data, loading, error } = useFetch(url)
-    const loadingItems = loading && <h2 className="loading">Loading...</h2>
+    const loadingItems = loading && <Skeleton/>
     const errorMessage = (!data && error) && <h2 className="error">{error.message || 'Something went wrong!'}</h2>
 
     return(

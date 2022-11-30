@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const Main = () => {
     const { data } = useFetch('https://fakestoreapi.com/products/categories')
-    const [category, setCategory] = useState("")
+    const [category, setCategory] = useState("all")
 
     return (
         <div className="main container">

@@ -16,11 +16,14 @@ const ItemCard = props => {
                 <StarRatingComponent
                     name="rating_2"
                     editing={false}
-                    renderStarIcon={() => <BsStarFill style={{marginTop: "3px"}}/>}
+                    renderStarIcon={() => <BsStarFill style={{ marginTop: "3px" }} />}
                     starCount={5}
                     value={props.item.rating.rate}
                 />
-                <div className="item-card_rate-count">({props.item.rating.rate})</div>
+                <div className="item-card_rate-count">
+                    <span className="item-card_rate-count__rate">{props.item.rating.rate}</span>
+                    <span className="item-card_rate-count__count">({props.item.rating.count})</span>
+                </div>
             </div>
             <div className="item-card__price">${props.item.price}</div>
             <button className="item-card__cartbtn">

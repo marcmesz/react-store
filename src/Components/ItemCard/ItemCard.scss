@@ -69,5 +69,15 @@
         }
     }
 
+    .item-card_rate-count{
+        &__rate{
+            color: red;
+        }
+
+        &__count{
+            color: wheat;
+        }
+    }
+
 
 }

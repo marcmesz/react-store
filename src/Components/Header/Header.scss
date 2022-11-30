@@ -4,4 +4,8 @@
     background-color: $white;
     margin-bottom: 1em;
     padding: 1em;
+
+    &__title{
+        color: $themeColor;
+    }
 }

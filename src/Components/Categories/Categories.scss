@@ -15,7 +15,11 @@
     }
 }
 
-.category + .category {
-    margin-top: .8em;
+.category{
+    padding: .5em 0;
+}
+
+.current-item{
+    color: $themeColor;
 }
 

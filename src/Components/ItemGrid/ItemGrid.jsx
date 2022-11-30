@@ -2,7 +2,6 @@ import ItemCard from '../ItemCard/ItemCard'
 import './ItemGrid.scss'
 
 const ItemGrid = props => {
-    console.log(props.items)
     return (
         <div className="item-grid">
             {

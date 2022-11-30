@@ -6,11 +6,13 @@
 
     &__title{
         margin-bottom: 1em;
+        color: $themeColor;
     }
 
     &__categories{
         display: flex;
         flex-direction: column;
+        cursor: pointer;
     }
 
     @include tablet{

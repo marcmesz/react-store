@@ -2,7 +2,6 @@ import './ItemCard.scss';
 import Card from '../../UI/Card/Card';
 import { Rating } from 'react-simple-star-rating'
 import { FaShoppingCart } from 'react-icons/fa';
-import { BsStarFill } from 'react-icons/bs';
 
 const ItemCard = props => {
     return (

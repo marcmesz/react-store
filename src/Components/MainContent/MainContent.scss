@@ -1,1 +1,9 @@
 @use '../../scss/' as *;
+
+.main-content{
+    width: 100%;
+
+    @include mobile{
+        margin-top: 4.5em;
+    }
+}

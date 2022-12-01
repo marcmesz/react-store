@@ -8,6 +8,9 @@
 
     &__title{
         color: $themeColor;
+        font-weight: bold;
+        font-size: 1.4em;
+
         @include mobile{
             font-size: 1em;
         }
@@ -17,5 +20,14 @@
         z-index: 999;
         position: fixed;
         border-bottom: 3px solid $themeColor;
+    }
+
+    .nav{
+        @include flex(unset, space-between);
+    }
+
+    .icons{
+        @include flex(center, center);
+        position: relative;
     }
 }

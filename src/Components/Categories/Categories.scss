@@ -1,12 +1,10 @@
 @use '../../scss/' as *;
 
 .category{
-    display: flex;
-
     @include flex(center, unset);
 
     &__icon{
-        display: flex;
+        @include flex(unset, unset);
         font-size: 1.5em;
     }
 

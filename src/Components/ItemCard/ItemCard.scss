@@ -30,7 +30,7 @@
     }
 
     &__rate {
-        display: flex;
+        @include flex(unset, unset);
         &__rating{
             margin-right: .4em;
         }
@@ -46,7 +46,6 @@
 
     &__cartbtn{
         @include flex(center, center);
-        display: flex;
         width: 100%;
         font-size: 1em;
         padding: .4em;

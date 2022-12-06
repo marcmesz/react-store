@@ -12,7 +12,7 @@ const Cart = () => {
             <h2 className="cart-title">Cart {numberOfItems}</h2>
             <table className="cart-items-table">
                 <thead>
-                    <tr><th>ID</th><th>Title</th><th>Amount</th><th>Price</th></tr>
+                    <tr><th width="10%">ID</th><th width="70%">Title</th><th width="10%">Amount</th><th width="10%">Price</th></tr>
                 </thead>
                 <tbody>
                     {items.length > 0 ? items.map((item, index) => {

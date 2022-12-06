@@ -5,7 +5,7 @@ import CartItem from './CartItem/CartItem';
 const Cart = () => {
     const items = useSelector(state => state.cart.items)
     const total = useSelector(state => state.cart.totalAmount)
-    const numberOfItems = items.length > 0 ? items.length > 1 ? "- " + items.length + " items" : "- " + items.length + " item" : ""
+    const numberOfItems = items.length > 0 ? items.length > 1 ? "- " + items.length + " items added" : "- " + items.length + " item added" : ""
 
     return (
         <div className="cart container">
@@ -22,6 +22,7 @@ const Cart = () => {
                     }) : <tr><td className="no-items" colSpan="4">No items added to cart.</td></tr>}
                 </tbody>
             </table>
+            {total > 0 && <div className="total-price">Total price: ${total}</div>}
         </div>
     )
 }

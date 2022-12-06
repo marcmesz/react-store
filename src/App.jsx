@@ -1,7 +1,7 @@
 import './App.scss';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
-import Main from './Components/Main/Main';
+import RoutesConfig from './Components/RoutesConfig/RoutesConfig';
 import { useState } from 'react';
 
 const App = () => {
@@ -9,9 +9,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header setMobile={setMobile}/>
-      <Main mobile={mobile} setMobile={setMobile}/>
-      <Footer/>
+      <Header setMobile={setMobile} />
+      <RoutesConfig mobile={mobile} setMobile={setMobile} />
+      <Footer />
     </div>
   );
 }

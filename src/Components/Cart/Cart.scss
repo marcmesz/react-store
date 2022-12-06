@@ -1,5 +1,9 @@
 @use '../../scss/' as *;
 
+.cart-title{
+    margin-bottom: 1em;
+}
+
 .cart-items-table{
     width: 100%;
     th{

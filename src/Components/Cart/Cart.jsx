@@ -5,18 +5,14 @@ import CartItem from './CartItem/CartItem';
 const Cart = () => {
     const items = useSelector(state => state.cart.items)
     const total = useSelector(state => state.cart.totalAmount)
-    console.log(items)
+    const numberOfItems = items.length > 0 ? items.length > 1 ? "- " + items.length + " items" : "- " + items.length + " item" : ""
 
     return (
         <div className="cart container">
+            <h2 className="cart-title">Cart {numberOfItems}</h2>
             <table className="cart-items-table">
                 <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Amount</th>
-                        <th>Price</th>
-                    </tr>
+                    <tr><th>ID</th><th>Title</th><th>Amount</th><th>Price</th></tr>
                 </thead>
                 <tbody>
                     {items.length > 0 ? items.map((item, index) => {

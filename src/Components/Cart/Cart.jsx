@@ -4,9 +4,15 @@ import CartItem from './CartItem/CartItem';
 
 const Cart = () => {
     const items = useSelector(state => state.cart.items)
-    const total = useSelector(state => state.cart.totalAmount)
+    const fixedTotal = useSelector(state => state.cart.totalAmount.toFixed(2))
     const numberOfItems = items.length > 0 ? items.length > 1 ? "- " + items.length + " items added" : "- " + items.length + " item added" : ""
+    
+    const removeLastDigit = total => {
+        return total.split(".")[1][1] === "0" ? total.slice(0,-1) : total
+    }
 
+    const total = removeLastDigit(fixedTotal)
+    
     return (
         <div className="cart container">
             <h2 className="cart-title">Cart {numberOfItems}</h2>

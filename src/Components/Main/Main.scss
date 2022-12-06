@@ -2,4 +2,7 @@
 
 .main {
     @include flex(unset, unset);
+    @include mobile{
+        flex-direction: column;
+    }
 }

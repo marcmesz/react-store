@@ -23,11 +23,22 @@
     }
 
     .nav{
-        @include flex(unset, space-between);
+        @include flex(center, space-between);
     }
 
     .icons{
         @include flex(center, center);
         position: relative;
+        font-size: 1.5em;
+        color: $themeColor;
+    }
+
+    .mobile-menu{
+        display: none;
+        margin-left: .8em;
+        cursor: pointer;
+        @include mobile{
+            display: block;
+        }
     }
 }

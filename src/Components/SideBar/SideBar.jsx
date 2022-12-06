@@ -4,15 +4,19 @@ import Card from '../../UI/Card/Card';
 import { BiCategory } from 'react-icons/bi';
 
 const SideBar = props => {
-
     const allCategory = props.category === "all" ? "current-item category" : "category"
+    const classes = props.mobile ? "sidebar mobile-menu" : "sidebar"
+    const handleClick = () => {
+        props.setCategory("all")
+        props.setMobile(false)
+    }
 
     return (
-        <div className="sidebar">
+        <div className={classes}>
             <Card>
                 <h3 className="sidebar__title">Categories</h3>
                 <div className="sidebar__categories">
-                    <div className={allCategory} onClick={()=>props.setCategory("all")}>
+                    <div className={allCategory} onClick={handleClick}>
                         <div className="category__icon"><BiCategory/></div>
                         <div className="category__content">All Category</div>
                     </div>
@@ -26,6 +30,7 @@ const SideBar = props => {
                                 category={props.categories}
                                 setCategory={props.setCategory}
                                 classes={classes}
+                                setMobile={props.setMobile}
                             />
                         )
                     })}

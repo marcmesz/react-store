@@ -1,20 +1,20 @@
 @use '../../scss/' as *;
 
-.cart{
-    font-size: 1.5em;
-    color: $themeColor;
+.cart-icon-holder{
+    position: relative;
+    cursor: pointer;
 }
 
 .item-count{
     @include flex(center, center);
     position: absolute;
-    height: 18px;
-    width: 18px;
+    min-height: 1.2rem;
+    min-width: 1.2rem;
     top: -8px;
     right: -8px;
     border-radius: 100%;
     background-color: red;
-    font-size: .8em;
+    font-size: .68rem;
     color: $white;
     font-weight: bold;
 }

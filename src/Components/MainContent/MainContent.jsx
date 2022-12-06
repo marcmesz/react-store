@@ -10,7 +10,7 @@ const MainContent = props => {
     }
     const { data, loading, error } = useFetch(url)
     const loadingItems = loading && <Skeleton/>
-    const errorMessage = (!data && error) && <h2 className="error">{error.message || 'Something went wrong!'}</h2>
+    const errorMessage = (!data || error) && <h2 className="error">{error.message || 'Something went wrong!'}</h2>
 
     return(
         <div className="main-content">

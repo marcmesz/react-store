@@ -1,1 +1,15 @@
 @use '../../scss/' as *;
+
+.cart-items-table{
+    width: 100%;
+    th{
+        background-color: $themeColor;
+        color: $white;
+        padding: 1em;
+    }
+}
+
+.no-items{
+    text-align: center;
+    padding: 1em;
+}

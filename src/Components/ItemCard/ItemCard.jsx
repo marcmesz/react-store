@@ -2,8 +2,14 @@ import './ItemCard.scss';
 import Card from '../../UI/Card/Card';
 import { Rating } from 'react-simple-star-rating'
 import { FaShoppingCart } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../store/cart';
 
 const ItemCard = props => {
+    const dispatch = useDispatch()
+    const handleClick = ({ id, title, price, amount }) => {
+        dispatch(cartActions.addItemToCart({ id, title, price, amount }))
+    }
     return (
         <Card className="item-card" title={props.item.title}>
             <div className="item-card__image" style={{ backgroundImage: `url(${props.item.image})` }}></div>
@@ -23,7 +29,7 @@ const ItemCard = props => {
                 </div>
             </div>
             <div className="item-card__price">${props.item.price}</div>
-            <button className="item-card__cartbtn">
+            <button className="item-card__cartbtn" onClick={() => handleClick({ id: props.item.id, title: props.item.title, price: props.item.price, amount: 1 })}>
                 <FaShoppingCart className="item-card__cartbtn__icon" />
                 <span className="item-card__cartbtn__text">Add to cart</span>
             </button>

@@ -1,0 +1,14 @@
+@use '../../../scss/' as *;
+
+.cart-item__id,
+.cart-item__amount,
+.cart-item__price{
+    text-align: center;
+}
+
+.cart-item__id,
+.cart-item__amount,
+.cart-item__price,
+.cart-item__title{
+    padding: 1em;
+}
